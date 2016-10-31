@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class TestRiekert {
 	public static void main(String[] args) {
 		ArrayList<Riekert> riekerts = new ArrayList<Riekert>();
-		Riekert riekert = new Riekert();
 		Niels niels = new Niels();
 		Arne arne = new Arne();
 		Jon jon = new Jon();
@@ -35,7 +34,7 @@ public class TestRiekert {
 	}
 }
 
-class Riekert {
+abstract class Riekert {
 	private int age;
 	private int length;
 	private String gender;
@@ -71,6 +70,7 @@ class Riekert {
 
 class Niels extends Riekert {
 	public void introduce() {
+		super.introduce();
 		System.out.println("Hoi ik ben Niels.");
 	}
 }
