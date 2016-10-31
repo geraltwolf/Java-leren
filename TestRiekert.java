@@ -30,6 +30,7 @@ public class TestRiekert {
 		for(int x = 0; x < riekerts.size(); x++){
 			System.out.println(riekerts.get(x).getName() + "(" + riekerts.get(x).getGender() + ") is " + riekerts.get(x).getAge() + " jaar en " + riekerts.get(x).getLength() + "cm lang.");
 			riekerts.get(x).introduce();
+			riekerts.get(x).instrument();
 		}
 	}
 }
@@ -57,15 +58,16 @@ abstract class Riekert {
 	public String getGender() {
 		return gender;
 	}
-	public void introduce() {
-		System.out.println("Hoi ik ben een Riekert.");
-	}
 	public void setName(String n) {
 		name = n;
 	}
 	public String getName() {
 		return name;
 	}
+	public void introduce() {
+		System.out.println("Hoi ik ben een Riekert.");
+	}
+	abstract public void instrument();
 }
 
 class Niels extends Riekert {
@@ -73,11 +75,17 @@ class Niels extends Riekert {
 		super.introduce();
 		System.out.println("Hoi ik ben Niels.");
 	}
+	public void instrument() {
+		System.out.println("Hoi ik speel computer.");
+	}
 }
 
 class Arne extends Riekert {
 	public void introduce() {
 		System.out.println("Hoi ik ben Arne.");
+	}
+	public void instrument() {
+		System.out.println("Hoi ik speel gitaar.");
 	}
 }
 
@@ -85,10 +93,16 @@ class Jon extends Riekert {
 	public void introduce() {
 		System.out.println("Hoi ik ben Jon.");
 	}
+	public void instrument() {
+		System.out.println("Hoi ik speel viool.");
+	}
 }
 
 class Olle extends Riekert {
 	public void introduce() {
 		System.out.println("HEBBAH");
+	}
+	public void instrument() {
+		System.out.println("DINGADONGDONG");
 	}	
 }
