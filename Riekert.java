@@ -18,6 +18,7 @@ public abstract class Riekert implements Musician {
 		length = newLength;
 		gender = newGender;
 		name = newName;
+		riekertCount++;
 	}
 
 	public void setAge(int a) {
@@ -47,7 +48,7 @@ public abstract class Riekert implements Musician {
 	public void introduce() {
 		System.out.println("Hoi ik ben een Riekert.");
 	}
-	public int getriekertCount () {
+	public static int getriekertCount () {
 		return riekertCount;
 	}
 }
