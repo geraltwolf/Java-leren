@@ -1,3 +1,5 @@
+// Arne is an object, not a class
+
 public class Arne extends Riekert implements Job {
 	public static final int YEAR_OF_BIRTH;
 
@@ -11,14 +13,17 @@ public class Arne extends Riekert implements Job {
 		System.out.println("Object Arne has been constructed on the heap.");
 	}
 
+	@Override
 	public void introduce() {
 		System.out.println("Hoi ik ben Arne.");
 	}
 	
+	@Override
 	public void playInstrument() {
 		System.out.println("Hoi ik speel gitaar.");
 	}
 	
+	@Override
 	public void hasJob(boolean job) {
 		if (job == true) {
 			System.out.println(getName() + " heeft een baan.");

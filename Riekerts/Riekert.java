@@ -5,6 +5,7 @@ public abstract class Riekert implements Musician {
 	private String gender;
 	private String name;
 	private static int riekertCount = 0;
+	public static final String surname = "Riekert";
 
 	public Riekert(){
 		// Roept een constructor aan om default args te geven aan de echte constructor
